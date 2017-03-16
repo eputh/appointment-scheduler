@@ -98,20 +98,57 @@
 
 <main class="main-wrapper">
     <section class="section contacts visible">
-        <div class="box with-margin" style="overflow: auto;">
+        <div class="box with-margin contacts-list" style="overflow: auto;">
             <div class="contact-pics col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
                 <h2>Contacts</h2>
-                    <img src="images/avatar1.png">
-                    <img src="images/avatar2.png">
-                    <img src="images/avatar3.png">
-                    <img src="images/avatar10.png">
-                    <img src="images/avatar4.png">
-                    <img src="images/avatar5.png">
-                    <img src="images/avatar6.png">
-                    <img src="images/avatar7.png">
-                    <img src="images/avatar8.png">
-                    <img src="images/avatar9.png">
+                <img src="images/plus.png" onclick="open_contact_form()">
+                <img src="images/avatar1.png">
+                <img src="images/avatar2.png">
+                <img src="images/avatar3.png">
+                <img src="images/avatar10.png">
+                <img src="images/avatar4.png">
+                <img src="images/avatar5.png">
+                <img src="images/avatar6.png">
+                <img src="images/avatar7.png">
+                <img src="images/avatar8.png">
+                <img src="images/avatar9.png">
                 </div>
+        </div>
+        <div class="box with-margin" id="add-contact-box">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
+                <h2>Add a new contact</h2>
+                <form class="form-horizontal style-form" action="https://formspree.io/emily.puth@gmail.com" method="POST">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid">
+                        <span class="input input--chisato">
+                            <input class="input__field input__field--chisato form-control" type="text" id="name" placeholder="Name" required />
+                        </span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid">
+                        <span class="input input--chisato">
+                            <input class="input__field input__field--chisato form-control" type="text" id="role" placeholder="Role" required />
+                        </span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid">
+                        <span class="input input--chisato">
+                            <input class="input__field input__field--chisato form-control" type="text" id="address" placeholder="Address" required />
+                        </span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid">
+                        <span class="input input--chisato">
+                            <input class="input__field input__field--chisato form-control" type="text" id="number" placeholder="Phone Number" required />
+                        </span>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="main-button">
+                        <button type="submit" class="btn" id="add-contact" onclick="close_contact_form()"><div class="btn-theme-contacts">Add</div></button>
+                    </div>
+                    <div class="main-button">
+                        <button class="btn" id="cancel" onclick="close_contact_form()"><div class="btn-theme-contacts">Cancel</div></button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </main>

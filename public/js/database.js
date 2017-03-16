@@ -1,28 +1,37 @@
 /**
  * Created by Emily on 3/15/2017.
  */
-// Set the configuration for your app
-var config = {
-    apiKey: "apiKey",
-    authDomain: "appt-f3a67.firebaseapp.com/",
-    databaseURL: "https://appt-f3a67.firebaseio.com/",
-    storageBucket: "bucket.appspot.com"
-};
-firebase.initializeApp(config);
 
-// Get a reference to the database service
+
+// // Get a reference to the database service
 var database = firebase.database();
 
 
-function addAppointment(name, contact, date_time, further_notes) {
-    firebase.database().ref('event/' + name).set({
+function addAppointment(name, contact, date, time, further_notes) {
+    var apptId = generateApptId();
+    firebase.database().ref('events/' + apptId).set({
         name: name,
         contact: contact,
-        datetime : date_time,
+        date : date,
+        time: time,
         notes : further_notes
     });
 }
 
 function addContact(name, role, address, phone) {
-    
+    firebase.database().ref('contacts/' + name).set({
+        role: role,
+        location: address,
+        phone: phone
+    });
 }
+
+function generateApptId() {
+    var apptId = "",
+        chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for( var i=0; i < 10; i++ )
+        apptId += chars.charAt(Math.floor(Math.random() * chars.length));
+
+    return apptId;
+}
+
