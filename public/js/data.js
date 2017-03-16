@@ -1,4 +1,6 @@
-var codropsEvents = {
+var events = 
+
+{
 	'11-23-2017' : '<a href="http://tympanus.net/codrops/2017/11/23/three-script-updates/">Three Script Updates</a>',
 	'11-21-2017' : '<a href="http://tympanus.net/codrops/2017/11/21/adaptive-thumbnail-pile-effect-with-automatic-grouping/">Adaptive Thumbnail Pile Effect with Automatic Grouping</a>',
 	'11-20-2017' : '<a href="http://tympanus.net/codrops/2017/11/20/learning-principles-for-improving-your-css/">Learning Principles for Improving Your CSS</a>',
@@ -60,7 +62,6 @@ var codropsEvents = {
 	'07-07-2017' : '<a href="http://tympanus.net/codrops/2017/07/07/freebie-baby-blue-ui-kit-psd/">Freebie: Baby Blue UI Kit (PSD)</a>',
 	'07-05-2017' : '<a href="http://tympanus.net/codrops/2017/07/05/designing-the-dreaded-form/">Designing the Dreaded Form</a>',
 	'07-02-2017' : '<a href="http://tympanus.net/codrops/2017/07/02/swatch-book-with-css3-and-jquery/">Swatch Book with CSS3 and jQuery</a>',				
-	'07-27-2017' : '<a href="http://tympanus.net/codrops/2017/06/27/responsive-3d-panel-layout/">Responsive 3D Panel Layout</a>',
 	'06-25-2017' : '<a href="http://tympanus.net/codrops/2017/06/25/timed-notifications-with-css-animations/">Timed Notifications with CSS Animations</a><a href="http://tympanus.net/codrops/2017/06/25/theadstock-giveaway-free-4th-of-july-themed-images/">TheAdStock Giveaway + Free 4th of July Themed Images</a>',
 	'06-19-2017' : '<a href="http://tympanus.net/codrops/2017/06/19/themefurnace-premium-wordpress-themes-giveaway/">ThemeFurnace Premium WordPress Themes Giveaway</a><a href="http://tympanus.net/codrops/2017/06/19/line-that-up-proper-alignment-in-web-design/">Line That Up: Proper Alignment in Web Design</a>',
 	'06-18-2017' : '<a href="http://tympanus.net/codrops/2017/06/18/3d-thumbnail-hover-effects/">3D Thumbnail Hover Effects</a>',

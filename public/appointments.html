@@ -7,15 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta charset="utf-8">
 
-
         <meta name="description" content="An app to help coordinate and remember appointments made for my grandparents.">
         <meta name="author" content="Emily Puth">
         <title>Appointment Scheduler</title>
-        <link rel="shortcut icon" href="images/apptscheduler.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
         <!-- style -->
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="css/effects/text.css" rel="stylesheet" type="text/css">
+        <link href="css/calendar.css" rel="stylesheet" type="text/css">
 
         <!-- bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -31,6 +31,7 @@
         <link href="css/effects/hover.css" rel="stylesheet" type="text/css">
         <link href="css/effects/normalize.css" rel="stylesheet" type="text/css">
         <link href="css/effects/component.css"  rel="stylesheet" type="text/css" >
+        <script src="js/effects/modernizr.custom.js"></script>
 
         <!-- slick carousel -->
         <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -53,7 +54,7 @@
             <li>
                 <a href="#0" class="selected" data-menu="appointments">
                     <i class="fa fa-calendar-plus-o" aria-hidden="true"></i></br>
-                    Add Appointment
+                    Appointment
                 </a>
             </li>
 
@@ -99,7 +100,7 @@
         <section class="section appointments visible">
             <div class="box with-margin">
                 <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
-                    <h2 style="	text-align: center;">Let's create a new appointment!</h2>
+                    <h2>Let's create a new appointment!</h2>
                     <form class="form-horizontal style-form" action="https://formspree.io/emily.puth@gmail.com" method="POST">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid">
                             <span class="input input--chisato">

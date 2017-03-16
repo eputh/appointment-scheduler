@@ -176,6 +176,7 @@
 	color: #fbfdff;
 	font-weight: 300;
 	margin-top: 10px;
+	padding-top: 0;
 }
 
 .custom-header h3 {
@@ -300,7 +301,7 @@
 }
 
 .custom-content-reveal span {
-	color: #fbfdff;
+	color: #1c202b;
 }
 
 .custom-content-reveal a {
