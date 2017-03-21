@@ -18,12 +18,13 @@ function addAppointment(name, contact, date, time, further_notes) {
     });
 }
 
-function addContact(name, role, address, phone) {
-    firebase.database().ref('contacts/' + name).set({
+function addContact(first_name, last_name, role, address, phone) {
+    firebase.database().ref('contacts/' + last_name+ ", "+first_name).set({
         role: role,
         location: address,
         phone: phone
     });
+    close_contact_form();
 }
 
 function generateApptId() {
