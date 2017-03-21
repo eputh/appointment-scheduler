@@ -27,6 +27,17 @@ function addContact(first_name, last_name, role, address, phone) {
     close_contact_form();
 }
 
+function readContacts() {
+    var orderedContacts = firebase.database().ref('contacts/').orderByKey();
+    orderedContacts.on("value", function(snapshot) {
+        snapshot.forEach(function(data) {
+            console.log(data.key, data.val().role, data.val().location, data.val().phone);
+        });
+    }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+    });
+}
+
 function generateApptId() {
     var apptId = "",
         chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
