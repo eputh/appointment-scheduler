@@ -38,7 +38,6 @@
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
         <!-- Firebase -->
-
         <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
         <script>
             // Initialize Firebase
@@ -86,67 +85,52 @@
                     Help
                 </a>
             </li>
-
-            <li><a href="mailto:emily.puth@gmail.com">
-            <div class="small-icons">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            </div>
-            </a></li>
-            <li><a href="https://linkedin.com/in/emilyputh">
-            <div class="small-icons">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </div>
-            </a></li>
-            <li><a href="https://www.facebook.com/emily.puth">
-            <div class="small-icons">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            </div>
-            </a></li>
-            <li><a href="https://github.com/eputh">
-            <div class="small-icons">
-            <i class="fa fa-github" aria-hidden="true"></i>
-            </div>
-            </a></li>
         </ul>
     </nav> <!-- .side-navigation -->
 
 
     <main class="main-wrapper">
         <section class="section appointments visible">
-            <div class="box with-margin">
-                <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
-                    <h2>Let's create a new appointment!</h2>
-                    <form class="form-horizontal style-form" action="https://formspree.io/emily.puth@gmail.com" method="POST">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
+                <h2>Let's create a new appointment!</h2>
+                <form class="form-horizontal style-form" method="POST">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 grid">
                             <span class="input input--chisato">
-                                <input class="input__field input__field--chisato form-control" type="text" id="name" placeholder="Name (Contact)" required />
+                                <input id="patient-name" type="text" list="name" placeholder="Who has the appointment?" class="input__field input__field--chisato form-control">
+                                <datalist id="name">
+
+                                </datalist>
                             </span>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid">
-                            <div class="details">
-                                <!--<p>Type of appointment: <span id="role">Role</span></p>-->
-                                <!--<p>Location: <span id="address">1234 ADDRESS</span></p>-->
-                                <!--<p>Phone Number: <span id="phone">(123)456-7890</span></p>-->
-                            </div>
-                        </div>
-                        <div class='calendar-menu'>
-                            <input type='text' class="form-control" placeholder="Date and Time" id='datetimepicker1'/>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 grid">
+                            <span class="input input--chisato">
+                                <input id="contact-name" type="text" list="contact" placeholder="With whom? (Contact)" class="input__field input__field--chisato form-control">
+                                <datalist id="contact">
+
+                                </datalist>
+                            </span>
+                    </div>
+                    <div class='calendar-menu input--chisato'>
+                        <input type='text' class="form-control" placeholder="Date and Time" id='datetimepicker1' style="margin-top: 90px;"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid">
                              <span class="input input--chisato" style="width: 100%;">
                                 <textarea name="message" class="form-control" id="further-notes" rows="5"
                                           placeholder="Any further notes? E.g. procedures to carry out before the appointment, papers to bring, issues you would like to discuss during the appointment, etc."
                                           id="create_appointment" required></textarea>
                             </span>
-                        </div>
+                    </div>
 
-                        <div class="clearfix"></div>
+                    <div class="clearfix"></div>
 
-                        <div class="main-button">
-                            <button type="submit" class="btn"><div class="btn-theme-appointments">Create</div></button>
-                        </div>
-                    </form>
-                </div>
+
+                    <div class="main-button">
+                        <button type="button" class="btn"
+                                onclick="addAppointment(document.getElementById('patient-name').value, document.getElementById('contact-name').value,
+                                    document.getElementById('datetimepicker1').value, document.getElementById('further-notes').value)">
+                            <div class="btn-theme-appointments">Create</div></button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -179,8 +163,10 @@
     <!-- custom -->
     <script src="js/nav.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
-
     <script src="js/modernizr.custom.js"></script>
+
+    <!-- database -->
+    <script src="js/database.js" type="text/javascript"></script>
 
     </body>
 
