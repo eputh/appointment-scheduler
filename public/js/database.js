@@ -18,9 +18,12 @@ function addAppointment(name, contact, date, time, further_notes) {
     });
 }
 
-function addContact(first_name, last_name, role, address, phone) {
-    firebase.database().ref('contacts/' + last_name+ ", "+first_name).set({
+function addContact(first_name, last_name, role, relationship, address, phone) {
+    var name = last_name != "" ? last_name+ ", "+first_name : first_name;
+    var group = relationship != "" ? relationship : "other";
+    firebase.database().ref('contacts/' + name).set({
         role: role,
+        group: group,
         location: address,
         phone: phone
     });
@@ -28,10 +31,12 @@ function addContact(first_name, last_name, role, address, phone) {
 }
 
 function readContacts() {
-    var orderedContacts = firebase.database().ref('contacts/').orderByKey();
+    var orderedContacts = firebase.database().ref('contacts/').orderByKey(),
+        ul = document.getElementById('contacts-list');
     orderedContacts.on("value", function(snapshot) {
         snapshot.forEach(function(data) {
-            console.log(data.key, data.val().role, data.val().location, data.val().phone);
+            var li = createContactListItem(data.val().group, data.key, data.val().phone, data.val().location, data.val().role);
+            ul.appendChild(li);
         });
     }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);

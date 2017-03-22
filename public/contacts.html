@@ -113,9 +113,35 @@
 
 <main class="main-wrapper">
     <section class="section contacts visible">
-        <div class="box with-margin contacts-list" style="overflow: auto;">
-            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
+        <div class="box with-margin">
+            <div class="contacts-list col-xs-12 col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
                 <h2>Contacts</h2>
+                <ul id="contacts-list" style="list-style-type: none;">
+                    <!--<li class="contact family">-->
+                        <!--<h3>Puth, Emily</h3>-->
+                        <!--<p>4087120625</p>-->
+                        <!--<p>720 High Glen Drive, San Jose, CA 95133</p>-->
+                        <!--<p>Granddaughter</p>-->
+                    <!--</li>-->
+                    <!--<li class="contact family">-->
+                        <!--<h3>Puth, Theary</h3>-->
+                        <!--<p>4087868263</p>-->
+                        <!--<p>720 High Glen Drive, San Jose, CA 95133</p>-->
+                        <!--<p>Daughter</p>-->
+                    <!--</li>-->
+                    <!--<li class="contact doctor">-->
+                        <!--<h3>Alavi, Munawar</h3>-->
+                        <!--<p>4082596774</p>-->
+                        <!--<p>200 Jose Figures Ave, Suite 365, San Jose, CA 95116</p>-->
+                        <!--<p>Cardiologist</p>-->
+                    <!--</li>-->
+                    <!--<li class="contact other">-->
+                        <!--<h3>Walgreens Capitol</h3>-->
+                        <!--<p>4082599200</p>-->
+                        <!--<p>350 N Capitol Ave, San Jose, CA 95133</p>-->
+                        <!--<p>Pharmacy</p>-->
+                    <!--</li>-->
+                </ul>
             </div>
             <div class="contact-button" onclick="open_contact_form()"><i class="fa fa-plus" aria-hidden="true"></i> add new contact</div>
         </div>
@@ -141,6 +167,16 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 grid">
                         <span class="input input--chisato">
+                            <select name="relationship" class="input__field input__field--chisato form-control" id="relationship">
+                                <option class="disabled-option" value="" disabled selected>Select Relationship Type</option>
+                                <option value="family">Family</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 grid">
+                        <span class="input input--chisato">
                             <input class="input__field input__field--chisato form-control" type="text" id="address" placeholder="Address" required />
                         </span>
                     </div>
@@ -155,7 +191,8 @@
                 </form>
             </div>
             <div class="contact-button" onclick="addContact(document.getElementById('first-name').value, document.getElementById('last-name').value, document.getElementById('role').value,
-                document.getElementById('address').value, document.getElementById('number').value)"><i class="fa fa-plus" aria-hidden="true"></i> add new contact</div>
+                document.getElementById('relationship').value, document.getElementById('address').value, document.getElementById('number').value)">
+                <i class="fa fa-plus" aria-hidden="true"></i> add new contact</div>
         </div>
     </section>
 </main>

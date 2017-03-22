@@ -456,7 +456,7 @@ contacts
 	font-size: 50px;
 	color: #3d58af;
 }
-.contacts h2 { color: #3d58af}
+.contacts h2 { color: #3d58af; text-transform: uppercase}
 .contacts .form-control {
 	min-height: 47px;
 	background: #f5f5f5;
@@ -475,17 +475,24 @@ contacts
 .contacts .form-control:focus {
 	box-shadow: 1px 1px 3px 0px #5fc9df, 1px 1px 13px 0px #54a8ff !important;
 }
+.contacts select .disabled-option { color: #9f9f9f}
 .contacts .main-button :hover .btn-theme-contacts {
 	background: -webkit-linear-gradient(#5fc9df, #54a8ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 .contacts-list {
-	/*visibility: visible;*/
+	overflow: auto;
+	width: 100%;
+	height: 89%;
 }
-.family { background: #fd5874;}
-.doctor { background: #3d58af;}
-.other { background: #99D22B;}
+.family { border-left: 3px solid #fd5874;}
+.doctor { border-left: 3px solid #3d58af;}
+.other { border-left: 3px solid #99D22B;}
+.contact {
+	text-align: left;
+	padding-left: 50px;
+}
 
 
 /* ==========================================================================
