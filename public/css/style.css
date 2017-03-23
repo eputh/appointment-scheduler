@@ -611,17 +611,11 @@ Navigation
 	-o-transform: translateZ(0);
 	transform: translateZ(0);
 }
-#loading-bar.index {
-	background-color: #8d58c6;
-}
-#loading-bar.contacts {
-	background-color: #f857a6;
-}
-#loading-bar.appointments {
-	background-color: #54a8ff;
-}
-#loading-bar.help {
-	background-color: #99D22B;
+#loading-bar {
+	background: -webkit-linear-gradient(left top, #8d58c6, #595ba2,#75e4e5); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right,  #8d58c6, #595ba2,#75e4e5); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right,  #8d58c6, #595ba2,#75e4e5); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right,  #8d58c6, #595ba2,#75e4e5); /* Standard syntax */
 }
 #loading-bar.loading {
 	visibility: visible;

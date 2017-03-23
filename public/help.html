@@ -37,6 +37,20 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDszIN7YDDBIdA1XcmQDGn5eUVBGbHyW3Y",
+            authDomain: "appt-f3a67.firebaseapp.com",
+            databaseURL: "https://appt-f3a67.firebaseio.com",
+            storageBucket: "appt-f3a67.appspot.com",
+            messagingSenderId: "676120349474"
+        };
+        firebase.initializeApp(config);
+    </script>
+
 </head>
 
 
@@ -123,10 +137,10 @@
 <!-- custom -->
 <script src="js/nav.js" type="text/javascript"></script>
 <script src="js/custom.js" type="text/javascript"></script>
-
 <script src="js/modernizr.custom.js"></script>
 
-
+<!-- database -->
+<script src="js/database.js" type="text/javascript"></script>
 
 </body>
 
